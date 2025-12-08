@@ -55,7 +55,7 @@ function M.load_session()
 end
 function M.save_session()
     if current_session then
-        vim.cmd("mks " .. current_session)
+        vim.cmd("mks! " .. current_session)
     else
         vim.ui.input("Session name", function(name)
             if name then
