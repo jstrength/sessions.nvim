@@ -58,7 +58,7 @@ function M.save_session()
         vim.cmd("mks! " .. current_session)
         vim.notify(current_session .. " saved")
     else
-        vim.ui.input("Session name", function(name)
+        vim.ui.input({ prompt = "Session name" }, function(name)
             if name then
                 vim.cmd("mks " .. name)
                 vim.notify(name .. " saved")
